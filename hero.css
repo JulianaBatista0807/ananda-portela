@@ -1,0 +1,316 @@
+:root{--paper:#fbf5f0;--blush:#f6e9e6;--serif:'Playfair Display',Georgia,'Times New Roman',serif}
+/* Ajuste desktop final: escala e composição centralizadas no container */
+html{font-size:16px}
+.site-header{height:80px;padding:16px max(40px,calc((100vw - 1240px)/2 + 40px));background:var(--paper);border-bottom:0}
+.hero{display:block;height:min(720px,calc(100vh - 80px));min-height:620px;max-height:720px;padding:0;overflow:hidden;background:linear-gradient(105deg,#fbf5f0 0%,#fcf8f5 56%,#f7e9e6 100%)}
+.hero-inner{position:relative;width:100%;max-width:1240px;height:100%;margin:0 auto;display:grid;grid-template-columns:46% 54%;align-items:stretch}
+.hero-copy{grid-column:1;grid-row:1;position:relative;z-index:5;width:auto;max-width:550px;align-self:start;margin:24px 0 0 40px}
+.hero h1{max-width:none;margin:0 0 10px;color:#1f1a1c;font-family:var(--serif);font-size:clamp(40px,3.6vw,49px);font-weight:600;line-height:1.05;letter-spacing:-.01em}
+.hero-title-line{display:block;white-space:nowrap}
+.hero h1 em{display:block;color:var(--wine);font-style:normal}
+.hero-subtitle{margin:0;color:#3b353b;font-size:clamp(18px,1.5vw,22px);line-height:1.25}
+.small-rule{width:40px;height:1px;margin:20px 0;background:var(--wine)}
+.hero h2{margin:0;color:var(--wine);font-size:clamp(28px,2.6vw,38px);font-weight:600;line-height:1.08}
+.hero-description{margin:2px 0 0;color:#454047;font-size:18px;line-height:1.3}
+.hero-button{min-height:52px;margin-top:20px;padding-inline:20px;font-size:13px}
+.hero-stage{position:relative;z-index:1;grid-column:2;grid-row:1;width:100%;height:100%;min-width:0;overflow:visible}
+.hero-halo{position:absolute;z-index:0;left:-128px;top:0;width:560px;height:560px;border-radius:50%;transform:none;background:radial-gradient(circle at center,#f2dcd8 0%,#f2dcd8 71%,rgba(242,220,216,.72) 83%,rgba(242,220,216,0) 100%)}
+.hero-photo{position:absolute;z-index:2;left:-83px;bottom:0;width:auto;height:96%;max-width:none;object-fit:contain;object-position:center bottom;border-radius:0;transform:none;filter:none}
+.hero-chat{position:absolute;z-index:6;top:8%;right:40px;width:min(220px,35%);display:flex;flex-direction:column;gap:10px}
+.chat-bubble{position:relative;width:fit-content;max-width:100%;padding:10px 14px 18px;border-radius:15px;background:#fff;color:#454047;box-shadow:0 5px 16px #62314712;font-size:13px;line-height:1.25}
+.chat-bubble:after{content:"";position:absolute;bottom:-5px;left:10px;width:10px;height:10px;background:inherit;transform:rotate(45deg)}
+.chat-bubble.incoming{align-self:flex-start;margin-right:0}
+.chat-bubble.outgoing{align-self:flex-end;margin-left:40px;background:#dcf3d0}
+.chat-bubble.outgoing:after{left:auto;right:10px}
+.chat-bubble small{position:absolute;right:9px;bottom:3px;color:#969097;font-size:8px;white-space:nowrap}
+.chat-bubble small b{padding-left:2px;color:#4fb6ec;font-weight:700;letter-spacing:-2px}
+.brain-art,.puzzle-art,.hero-wave{position:absolute;z-index:1;fill:none;stroke:#d9a2a5;stroke-width:1.1;opacity:.62}
+.brain-art{width:150px;right:10px;top:2%;opacity:.6}
+.puzzle-art{width:76px;right:12px;top:51%;opacity:.7;transform:rotate(10deg)}
+.hero-wave{right:0;bottom:0;width:290px;height:80px;fill:none;stroke-width:1.1;opacity:.72}
+.hero-mantra{position:absolute;z-index:3;right:8px;bottom:7%;width:200px;margin:0;color:#a14b66;font:31px/1.04 'Great Vibes',cursive;text-align:center;transform:rotate(-5deg)}
+.hero-benefits{position:absolute;z-index:5;left:40px;bottom:22px;width:43%;display:grid;grid-template-columns:.9fr 1.1fr 1.45fr;gap:8px;align-items:center;margin:0}
+.hero-benefits div{display:flex;align-items:center;gap:7px;color:#554f55;font-size:12px;line-height:1.22}
+.hero-benefits svg{width:22px;height:22px;flex:0 0 22px;fill:none;stroke:var(--wine);stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round}
+.floating-wa{width:44px;height:44px;right:16px;bottom:14px;z-index:12}
+@media(max-width:1100px) and (min-width:768px){.hero-inner{grid-template-columns:48% 52%}.hero-copy{margin-left:24px}.hero h1{font-size:clamp(34px,3.6vw,40px)}.hero-description{font-size:17px}.hero-benefits{left:24px;width:47%;gap:5px}.hero-benefits div{font-size:10px}.hero-benefits svg{width:20px;height:20px;flex-basis:20px}.hero-photo{left:-74px}.hero-halo{left:-120px;width:520px;height:520px}.hero-chat{right:18px;width:min(205px,39%)}.chat-bubble{font-size:11px}}
+@media(max-width:900px) and (min-width:768px){.hero-inner{grid-template-columns:52% 48%}.hero-copy{margin-left:22px}.hero h1{font-size:clamp(32px,3.7vw,36px)}.hero-title-line{white-space:nowrap}.hero-benefits{left:22px;width:51%;grid-template-columns:1fr 1.1fr 1.4fr}.hero-benefits div{font-size:9px}.hero-photo{left:-96px}.hero-halo{left:-132px;width:490px;height:490px}.hero-chat{right:10px;width:min(190px,44%)}.chat-bubble{font-size:10px}}
+@media(max-width:767px){.site-header{height:68px;padding:0 18px}.hero{display:flex;flex-direction:column;height:auto;min-height:0;max-height:none;padding:25px 19px 24px;overflow:hidden}.hero-inner{display:contents}.hero-copy{order:1;grid-column:auto;grid-row:auto;width:100%;max-width:none;margin:0;align-self:auto}.hero h1{font-size:clamp(32px,8.6vw,38px);line-height:1.04;margin-bottom:11px}.hero-title-line{white-space:normal}.hero-subtitle{font-size:19px}.small-rule{margin:14px 0 9px}.hero h2{font-size:30px}.hero-description{font-size:18px;margin:2px 0 0}.hero-button{width:100%;max-width:420px;min-height:48px;margin-top:14px}.hero-stage{order:2;grid-column:auto;grid-row:auto;flex:0 0 370px;width:100%;height:370px;margin-top:12px;overflow:visible}.hero-halo{left:50%;top:7px;width:min(86%,340px);height:335px;transform:translateX(-50%)}.hero-photo{left:50%;height:100%;max-width:none;transform:translateX(-50%)}.hero-chat{position:relative;order:3;top:auto;right:auto;width:100%;max-width:520px;margin:12px auto 0;gap:8px}.hero-chat .chat-bubble{max-width:min(88%,340px);font-size:12px;padding:10px 12px 18px}.hero-chat .chat-bubble:nth-child(n+4){display:none}.hero-mantra,.hero-wave,.brain-art,.puzzle-art{display:none}.hero-benefits{position:relative;order:4;left:auto;bottom:auto;width:100%;grid-template-columns:1fr;gap:12px;margin:20px 0 0}.hero-benefits div{font-size:11px;gap:10px}.hero-benefits svg{width:25px;height:25px;flex-basis:25px}.floating-wa{width:44px;height:44px;right:12px;bottom:12px}}
+@media(max-width:390px){.hero{padding-inline:16px}.hero h1{font-size:clamp(29px,8.3vw,32px)}.hero-stage{flex-basis:330px;height:330px}.hero-halo{height:300px}.hero-photo{height:100%}.hero-benefits{gap:10px}}
+
+
+
+/* Botão e benefícios do hero */
+.hero-button{display:flex;width:min(380px,100%);max-width:100%;height:56px;min-height:56px;padding:0 28px;border-radius:16px;gap:12px;background:var(--wine);font-family:var(--sans);font-size:16px;font-weight:500;justify-content:flex-start}
+.hero-button .wa-icon{width:24px;height:24px;flex:0 0 24px;border-width:1.5px}
+.hero-button .wa-icon svg{width:17px;height:17px}
+.hero-button__label{font-family:var(--sans);font-size:16px;font-weight:500;color:#fff;white-space:nowrap}
+.hero-button .arrow{margin-left:auto;font-size:23px}
+.hero-benefits{position:static;left:auto;bottom:auto;width:min(100%,560px);display:flex;flex-direction:row;align-items:flex-start;gap:28px;margin:28px 0 0}
+.hero-benefits>div{display:flex;flex:1 1 0;min-width:0;align-items:flex-start;gap:10px;color:#6b6b6b;font-family:var(--sans);font-size:13px;font-weight:400;line-height:1.4}
+.hero-benefits svg{width:26px;height:26px;flex:0 0 26px;flex-shrink:0;fill:none;stroke:#7a1e3e;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.hero-benefits .hero-benefit__text{display:block;flex:1 1 auto;max-width:160px;color:#6b6b6b;font-family:var(--sans);font-size:13px;font-weight:400;line-height:1.4}
+@media(max-width:767px){.hero-button{width:100%;max-width:420px;height:54px;min-height:54px;padding-inline:18px;border-radius:16px;font-size:15px}.hero-button__label{font-size:15px}.hero-benefits{width:100%;gap:16px;margin-top:24px}.hero-benefits>div{font-size:12px}.hero-benefits .hero-benefit__text{font-size:12px}}
+@media(max-width:640px){.hero-button{padding-inline:15px;gap:9px;font-size:14px}.hero-button__label{font-size:14px}.hero-benefits{flex-direction:column;gap:16px}.hero-benefits>div{width:100%;flex:none;align-items:flex-start}.hero-benefits .hero-benefit__text{max-width:none;width:100%}}
+
+
+/* Hero compacto: bloco único de retrato, conversa e arte */
+.hero{height:min(720px,calc(100vh - 80px));min-height:min(620px,calc(100vh - 80px));max-height:720px;overflow:hidden}
+.hero-inner{width:100%;max-width:1240px;height:100%;padding:0 60px;box-sizing:border-box;grid-template-columns:40% 60%;gap:0}
+.hero-copy{margin:18px 0 0;max-width:none;width:100%;padding:0}
+.hero h1{font-size:clamp(36px,3.3vw,42px);line-height:1.04;letter-spacing:-.015em;margin-bottom:10px}
+.hero-subtitle{font-size:clamp(18px,1.5vw,22px);line-height:1.25}
+.small-rule{margin:16px 0}
+.hero h2{font-size:clamp(28px,2.6vw,36px);line-height:1.06}
+.hero-description{font-size:18px;line-height:1.25;margin-top:2px}
+.hero-button{margin-top:16px}
+.hero-benefits{width:calc(100% + 44px);margin-top:24px;gap:28px}
+.hero-benefits>div{align-items:flex-start;gap:10px;font-size:12px;line-height:1.35}
+.hero-benefits svg{width:26px;height:26px;flex:0 0 26px;stroke-width:1.5}
+.hero-benefits .hero-benefit__text{font-size:12px;line-height:1.35;max-width:150px}
+.hero-stage{position:relative;z-index:1;grid-column:2;grid-row:1;width:100%;height:100%;min-width:0;overflow:visible;isolation:isolate}
+.hero-halo{left:-48px;top:18px;width:480px;height:480px;transform:none;background:radial-gradient(circle at center,#f2dcd8 0%,#f2dcd8 75%,rgba(242,220,216,.72) 87%,rgba(242,220,216,0) 100%)}
+.hero-photo{position:absolute;z-index:2;left:-85px;top:60px;bottom:auto;height:130%;width:auto;max-width:none;object-fit:contain;object-position:center top;transform:none}
+.hero-art{position:absolute;z-index:1;top:0;right:-22px;width:140px;height:auto;overflow:visible;fill:none;stroke:#E3A9B0;stroke-width:1.4;opacity:.75;pointer-events:none}
+.hero-art .brain-drawing{fill:none;stroke:inherit;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.hero-chat{position:absolute;z-index:6;left:45%;top:90px;right:auto;width:286px;max-width:none;display:flex;flex-direction:column;align-items:stretch;gap:10px;margin:0}
+.chat-bubble{position:relative;width:fit-content;max-width:230px;padding:8px 12px 15px;border-radius:10px;box-shadow:0 2px 6px rgba(0,0,0,.06);font-size:12px;line-height:1.3}
+.chat-bubble:after{width:6px;height:6px;bottom:-3px;left:12px}
+.chat-bubble.incoming{align-self:flex-start;margin:0}
+.chat-bubble.outgoing{align-self:flex-end;margin:0 0 0 54px}
+.chat-bubble.outgoing:after{left:auto;right:12px}
+.chat-bubble small{right:8px;bottom:2px;font-size:10px}
+.chat-bubble small b{color:#4fb6ec}
+.hero-mantra{z-index:4;right:72px;bottom:22px;width:190px;font-size:26px;line-height:1.05;transform:rotate(-6deg)}
+@media(max-width:1024px) and (min-width:769px){.hero-inner{padding-inline:40px;grid-template-columns:50% 50%}.hero-copy{margin-top:18px}.hero h1{font-size:clamp(30px,3.5vw,36px)}.hero-benefits{width:calc(100% + 24px);gap:16px}.hero-benefits>div,.hero-benefits .hero-benefit__text{font-size:11px}.hero-photo{left:-85px;top:66px;height:126%}.hero-halo{left:-55px;width:420px;height:420px}.hero-art{width:110px;height:auto;right:-18px}.hero-chat{left:42%;width:238px;top:90px}.chat-bubble{max-width:190px;font-size:11px}.chat-bubble.outgoing{margin-left:48px}.hero-mantra{right:24px}}
+@media(max-width:768px){.hero{height:auto;min-height:0;max-height:none;padding:24px 20px;overflow:hidden}.hero-inner{display:flex;flex-direction:column;gap:0;width:100%;height:auto;max-width:600px;padding:0;margin:0 auto}.hero-copy{order:1;width:100%;max-width:none;margin:0}.hero h1{font-size:clamp(30px,8.6vw,38px);line-height:1.04}.hero-title-line{white-space:normal}.hero-subtitle{font-size:19px}.small-rule{margin:14px 0}.hero h2{font-size:30px}.hero-description{font-size:17px}.hero-button{margin-top:14px}.hero-benefits{width:100%;margin-top:20px;gap:14px}.hero-benefits>div,.hero-benefits .hero-benefit__text{font-size:12px}.hero-stage{order:2;display:flex;flex-direction:column;align-items:center;width:100%;height:auto;min-height:0;margin-top:20px;overflow:visible}.hero-halo{left:50%;top:24px;width:min(88vw,360px);height:min(88vw,360px);transform:translateX(-50%)}.hero-photo{position:relative;left:auto;top:auto;bottom:auto;height:390px;width:auto;max-width:100%;object-fit:contain;object-position:center bottom;transform:none}.hero-art{position:absolute;z-index:1;top:0;right:8px;left:auto;width:70px;height:auto}.hero-chat{position:relative;left:auto;right:auto;top:auto;order:3;align-self:center;width:min(100%,460px);margin:14px 0 0;gap:10px}.chat-bubble{font-size:12px;max-width:min(82%,320px)}.chat-bubble.outgoing{margin-left:52px}.hero-chat .chat-bubble:nth-child(n+4){display:block}.hero-mantra{position:relative;right:auto;bottom:auto;order:4;align-self:center;width:100%;margin:22px 0 0;text-align:center;transform:rotate(-6deg);font-size:26px}.floating-wa{right:12px;bottom:12px}}
+@media(max-width:640px){.hero-benefits{flex-direction:column;gap:16px}.hero-benefits>div{width:100%;flex:none}.hero-benefits .hero-benefit__text{max-width:none;width:100%}.hero-stage{margin-top:18px}.hero-photo{height:350px}.hero-chat{max-width:420px}.chat-bubble{max-width:84%}.hero-mantra{margin-top:18px}}
+@media(max-width:640px){.chat-bubble.outgoing{max-width:calc(100% - 52px)}}
+
+/* Mantém os benefícios dentro da coluna de texto, sem invadir a foto. */
+@media (min-width: 769px) {
+  .hero-benefits { width: min(100%, 390px); max-width: 390px; gap: 14px; box-sizing: border-box; }
+  .hero-benefits > div { min-width: 0; gap: 7px; }
+  .hero-benefits svg { width: 24px; height: 24px; flex-basis: 24px; }
+  .hero-benefits .hero-benefit__text { min-width: 0; max-width: none; font-size: 12px; line-height: 1.35; overflow-wrap: normal; }
+}
+
+/* Mobile: título e retrato na primeira dobra, reutilizando a mesma imagem. */
+@media (max-width: 768px) {
+  .hero {
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    padding: 20px 20px 76px;
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
+  .hero-inner {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    padding: 0;
+    margin: 0 auto;
+    overflow: visible;
+  }
+
+  .hero-copy {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero h1 {
+    position: relative;
+    z-index: 4;
+    width: 58%;
+    min-height: 280px;
+    box-sizing: border-box;
+    margin: 0 0 8px;
+    font-size: clamp(26px, 7.2vw, 32px);
+    line-height: 1.1;
+    overflow-wrap: break-word;
+  }
+
+  .hero-title-line { white-space: normal; }
+  .hero-subtitle { font-size: 19px; line-height: 1.3; margin: 0; }
+  .small-rule { margin: 14px 0; }
+  .hero h2 { font-size: 30px; line-height: 1.08; }
+  .hero-description { margin: 2px 0 0; font-size: 17px; line-height: 1.3; }
+  .hero-button { width: 100%; max-width: none; min-height: 54px; height: 54px; margin-top: 16px; }
+  .hero-benefits { width: 100%; margin: 22px 0 0; gap: 13px; }
+  .hero-benefits > div { width: 100%; flex: none; align-items: flex-start; }
+  .hero-benefits .hero-benefit__text { max-width: none; width: 100%; }
+
+  .hero-stage { display: contents; }
+  .hero-halo {
+    position: absolute;
+    z-index: 0;
+    top: 88px;
+    right: -2px;
+    left: auto;
+    width: 180px;
+    height: 180px;
+    transform: none;
+  }
+  .hero-photo {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: -16px;
+    bottom: auto;
+    left: auto;
+    width: 42%;
+    height: 280px;
+    max-width: none;
+    margin: 0;
+    object-fit: contain;
+    object-position: bottom;
+    transform: none;
+  }
+  .hero-art {
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    right: -22px;
+    left: auto;
+    width: 175px;
+    height: 292px;
+    opacity: .4;
+  }
+  .hero-chat {
+    position: relative;
+    z-index: 5;
+    order: 2;
+    top: auto;
+    right: auto;
+    left: auto;
+    align-self: stretch;
+    width: 100%;
+    max-width: none;
+    margin: 20px 0 0;
+    gap: 9px;
+  }
+  .hero-chat .chat-bubble { max-width: 80%; font-size: 12px; }
+  .hero-chat .chat-bubble:nth-child(n+4) { display: none; }
+  .hero-chat .chat-bubble.outgoing { max-width: calc(80% - 32px); margin-left: 32px; }
+  .hero-mantra {
+    position: relative;
+    z-index: 4;
+    order: 3;
+    right: auto;
+    bottom: auto;
+    align-self: center;
+    width: 100%;
+    margin: 22px 0 0;
+    padding-bottom: 10px;
+    text-align: center;
+    transform: rotate(-6deg);
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hero { padding-inline: 16px; }
+  .hero h1 { width: 59%; min-height: 274px; font-size: clamp(26px, 7.2vw, 29px); }
+  .hero-photo { width: 43%; height: 274px; }
+  .hero-halo { width: 170px; height: 170px; top: 88px; }
+}
+
+/* Psicoterapia: retrato recortado, fundo suave e ornamentos próprios da seção. */
+.psychotherapy {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: 28% 41% 31%;
+  align-items: center;
+  gap: 0;
+  min-height: 340px;
+  padding: 0 clamp(28px, 4.5vw, 64px) 0 0;
+  overflow: hidden;
+  background: linear-gradient(100deg, #f3e1dd 0%, #f7ebe7 45%, #fbf4f1 100%);
+}
+.psychotherapy > * { position: relative; z-index: 1; }
+.psychotherapy .therapy-curve,
+.psychotherapy .therapy-leaves { position: absolute; z-index: 0; pointer-events: none; fill: none; }
+.psychotherapy .therapy-curve { left: 0; bottom: 0; width: 100%; height: 88px; fill: #f1dcd8; opacity: .5; }
+.psychotherapy .therapy-leaves { right: 0; bottom: 0; width: 180px; height: 100%; stroke: #c99aa3; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; opacity: .55; }
+.therapy-photo { position: relative; z-index: 1; grid-column: 1; grid-row: 1; align-self: stretch; width: 100%; min-width: 0; min-height: 340px; overflow: visible; border: 0; border-radius: 0; background: none; box-shadow: none; }
+.therapy-photo .therapy-blob { position: absolute; z-index: 0; left: -48px; top: 20px; width: 420px; height: 320px; border-radius: 58% 42% 55% 45% / 50% 60% 40% 50%; background: #efd6d1; opacity: .7; pointer-events: none; }
+.therapy-photo img { position: absolute; z-index: 1; left: 0; top: 10px; width: auto; height: 110%; max-width: none; object-fit: contain; object-position: bottom left; mix-blend-mode: normal; filter: none; }
+.therapy-copy { position: relative; z-index: 2; grid-column: 2; grid-row: 1; align-self: center; min-width: 0; padding: 24px 24px 24px 14px; }
+.therapy-copy h2 { font-size: 31px; }
+.therapy-copy .lead { font-size: 19px; line-height: 1.35; color: #3b353b; margin: 5px 0 10px; }
+.therapy-copy > p:not(.lead) { max-width: 440px; margin: 0 0 12px; color: #5a545a; font-size: 15px; line-height: 1.5; }
+.therapy-copy .text-link { margin-top: 6px; padding: 10px 22px; border-radius: 999px; font-size: 14px; line-height: 1.2; }
+.therapy-values { position: relative; z-index: 2; grid-column: 3; grid-row: 1; justify-self: stretch; margin: 0; padding: 0 0 0 26px; border-left: 1px solid #d8a4a8; gap: 26px; }
+.therapy-values li { align-items: center; gap: 14px; color: #4a444a; font-size: 14px; line-height: 1.35; }
+.therapy-values li > svg { display: block; width: 28px; height: 28px; flex: 0 0 28px; fill: none; stroke: #7a1e3e; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.therapy-values li > span { font: inherit; color: inherit; }
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .psychotherapy { grid-template-columns: 32% 40% 28%; padding-right: 24px; }
+  .therapy-photo .therapy-blob { left: -78px; }
+  .psychotherapy .therapy-leaves { opacity: .35; }
+  .therapy-copy { padding-inline: 12px; }
+  .therapy-copy h2 { font-size: 28px; }
+  .therapy-copy .lead { font-size: 17px; }
+  .therapy-copy > p:not(.lead) { font-size: 14px; }
+  .therapy-values { padding-left: 16px; }
+  .therapy-values li { gap: 9px; font-size: 12px; }
+}
+
+@media (max-width: 768px) {
+  .psychotherapy {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-height: 0;
+    padding: 0 22px 30px;
+    overflow: hidden;
+  }
+  .psychotherapy .therapy-curve { height: 65px; }
+  .psychotherapy .therapy-leaves { display: none; }
+  .therapy-photo {
+    order: 1;
+    flex: 0 0 320px;
+    width: 100%;
+    height: 320px;
+    min-height: 0;
+    overflow: hidden;
+  }
+  .therapy-photo .therapy-blob { left: 50%; top: 22px; width: min(330px, 92vw); height: 276px; transform: translateX(-50%); }
+  .therapy-photo img { left: 50%; top: 10px; height: 110%; transform: translateX(-50%); object-position: bottom center; }
+  .therapy-copy { order: 2; width: 100%; padding: 22px 0 8px; }
+  .therapy-copy h2 { font-size: 29px; }
+  .therapy-copy .lead { font-size: 18px; }
+  .therapy-copy > p:not(.lead) { max-width: none; font-size: 15px; }
+  .therapy-copy .text-link { font-size: 14px; }
+  .therapy-values { order: 3; width: 100%; margin: 12px 0 0; padding: 14px 0 0; border-left: 0; border-top: 1px solid #d8a4a8; gap: 18px; }
+  .therapy-values li { font-size: 14px; }
+}
+
+/* Zera o card herdado do tema original da seção. */
+.therapy-photo { max-width: none; margin: 0; }
+.therapy-photo::before { content: none; display: none; }
+@media (max-width: 768px) {
+  .therapy-photo { max-width: none; margin: 0; border-radius: 0; }
+  .therapy-values { display: flex; flex-direction: column; }
+  .therapy-values li:last-child { grid-column: auto; }
+}
+
+/* Cérebro único do hero: dimensões por breakpoint e traço uniforme. */
+.hero-art { width: 140px; height: auto; aspect-ratio: 1 / 1; overflow: visible; fill: none; stroke: #E3A9B0; stroke-width: 1.4; opacity: .75; pointer-events: none; }
+.hero-art .brain-drawing { fill: none; stroke: inherit; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+@media (max-width: 1024px) and (min-width: 769px) { .hero-art { width: 110px; height: auto; } }
+@media (max-width: 768px) { .hero-art { width: 70px; height: auto; top: 0; right: 8px; left: auto; z-index: 1; opacity: .75; } }
