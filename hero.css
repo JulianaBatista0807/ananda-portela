@@ -241,10 +241,8 @@ html{font-size:16px}
   background: linear-gradient(100deg, #f3e1dd 0%, #f7ebe7 45%, #fbf4f1 100%);
 }
 .psychotherapy > * { position: relative; z-index: 1; }
-.psychotherapy .therapy-curve,
-.psychotherapy .therapy-leaves { position: absolute; z-index: 0; pointer-events: none; fill: none; }
+.psychotherapy .therapy-curve { position: absolute; z-index: 0; pointer-events: none; fill: none; }
 .psychotherapy .therapy-curve { left: 0; bottom: 0; width: 100%; height: 88px; fill: #f1dcd8; opacity: .5; }
-.psychotherapy .therapy-leaves { right: 0; bottom: 0; width: 180px; height: 100%; stroke: #c99aa3; stroke-width: 1.2; stroke-linecap: round; stroke-linejoin: round; opacity: .55; }
 .therapy-photo { position: relative; z-index: 1; grid-column: 1; grid-row: 1; align-self: stretch; width: 100%; min-width: 0; min-height: 340px; overflow: visible; border: 0; border-radius: 0; background: none; box-shadow: none; }
 .therapy-photo .therapy-blob { position: absolute; z-index: 0; left: -48px; top: 20px; width: 420px; height: 320px; border-radius: 58% 42% 55% 45% / 50% 60% 40% 50%; background: #efd6d1; opacity: .7; pointer-events: none; }
 .therapy-photo img { position: absolute; z-index: 1; left: 0; top: 10px; width: auto; height: 110%; max-width: none; object-fit: contain; object-position: bottom left; mix-blend-mode: normal; filter: none; }
@@ -261,7 +259,6 @@ html{font-size:16px}
 @media (max-width: 1024px) and (min-width: 769px) {
   .psychotherapy { grid-template-columns: 32% 40% 28%; padding-right: 24px; }
   .therapy-photo .therapy-blob { left: -78px; }
-  .psychotherapy .therapy-leaves { opacity: .35; }
   .therapy-copy { padding-inline: 12px; }
   .therapy-copy h2 { font-size: 28px; }
   .therapy-copy .lead { font-size: 17px; }
@@ -280,7 +277,6 @@ html{font-size:16px}
     overflow: hidden;
   }
   .psychotherapy .therapy-curve { height: 65px; }
-  .psychotherapy .therapy-leaves { display: none; }
   .therapy-photo {
     order: 1;
     flex: 0 0 320px;
@@ -309,8 +305,3 @@ html{font-size:16px}
   .therapy-values li:last-child { grid-column: auto; }
 }
 
-/* Cérebro único do hero: dimensões por breakpoint e traço uniforme. */
-.hero-art { width: 140px; height: auto; aspect-ratio: 1 / 1; overflow: visible; fill: none; stroke: #E3A9B0; stroke-width: 1.4; opacity: .75; pointer-events: none; }
-.hero-art .brain-drawing { fill: none; stroke: inherit; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
-@media (max-width: 1024px) and (min-width: 769px) { .hero-art { width: 110px; height: auto; } }
-@media (max-width: 768px) { .hero-art { width: 70px; height: auto; top: 0; right: 8px; left: auto; z-index: 1; opacity: .75; } }
